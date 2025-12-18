@@ -1,0 +1,10 @@
+.assets/
+.github/
+.vscode/
+content/
+node_modules/
+.gitignore
+.nvmrc
+.prettierignore
+.prettierrc
+README.md
