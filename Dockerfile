@@ -1,13 +1,10 @@
 FROM node:24-alpine AS builder
 
-# Prepare specific Yarn version
-RUN corepack enable && corepack prepare yarn@4.0.2 --activate
-
 WORKDIR /app
 
 COPY . .
 
-RUN yarn install && yarn generate
+RUN npm install && npm run build
 
 # ---------------------------------------------------
 FROM nginx:alpine AS server
